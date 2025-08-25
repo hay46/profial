@@ -1,47 +1,54 @@
-import React from 'react'
-import './Header.css'
-import logo from '../../assets/haymanot photo.jpg'
+import React, { useState } from "react";
+import "./Header.css";
+import logo from "../../assets/haymanot photo.jpg";
+
 function Header() {
+  const [navbar, setNavbar] = useState(false); // ✅ Proper useState declaration
+
   return (
     <div className="portfolio">
       <nav>
         <ul>
-          <button>portfolio</button>
-          <li className="">
-            {" "}
-            <a href="">Home</a>
+          <li>
+            <button>Portfolio</button>
           </li>
-          <li className="">
-            <a href="">About</a>
+          <li>
+            <a href="#">Home</a>
           </li>
-          <li className="">
-            <a href="">Service</a>
+          <li>
+            <a href="#">About</a>
           </li>
-          <li className="">
-            <a href="">portfolio</a>
+          <li>
+            <a href="#">Service</a>
           </li>
-          <li className="">
-            <a href="">Contact</a>
+          <li>
+            <a href="#">Portfolio</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
           </li>
         </ul>
         <button className="contact-with-me-top">Contact with me</button>
       </nav>
+
       <div className="portfolio-image">
-        <img src={logo} alt="" />
+        <img src={logo} alt="Haymanot Ebabu" />
       </div>
-      <div className='hero-page'>
+
+      <div className="hero-page">
         <h1>
-        
-          <span>i'm haymanot ebabu</span>,<br />and also Fullstack Web Developer
+          <span>I'm Haymanot Ebabu</span>,<br />
+          and also a Fullstack Web Developer
         </h1>
         <p>I am a frontend Web developer</p>
       </div>
-<div className='contact-with-me'>
-  <button className='contact'>contact with me </button>
-  <button>My reasum</button>
-</div>
+
+      <div className="contact-with-me">
+        <button className="contact">Contact with me</button>
+        <button>My résumé</button>
+      </div>
     </div>
   );
 }
 
-export default Header
+export default Header;

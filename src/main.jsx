@@ -1,10 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.jsx";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
+// Optional: Enable these if you plan to use Bootstrap or Font Awesome
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "font-awesome/css/font-awesome.min.css";
+
+const root = document.getElementById("root");
+
+ReactDOM.createRoot(root).render(
+  <React.StrictMode>
+    <BrowserRouter>
       <App />
-  </StrictMode>
+    </BrowserRouter>
+  </React.StrictMode>
 );
